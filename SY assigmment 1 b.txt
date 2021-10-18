@@ -1,0 +1,30 @@
+#include<stdio.h>
+int ifprime(int n);
+void prime_no(int start,int end);
+int main(){
+  int start,end;
+  printf("Enter the limits  :");
+  scanf("%d%d", &start,&end);
+  prime_no(start,end);
+  return 0;
+}
+
+void prime_no(int start,int end){
+printf("All prime no between limits are : \n");
+while(start <= end){
+  if(ifprime(start)){
+    printf("%d\n", start);
+  }
+  start++;}}
+  int ifprime(int num){
+    int i;
+    for(i = 2; i <= num/2; i++){
+      if(num%i == 0){
+        return 0;
+      }
+    
+    }
+      return 1;
+  
+  
+  }
